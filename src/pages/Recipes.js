@@ -83,6 +83,7 @@ export default class Recipes extends Component {
             </div>
           </div>
         ) : (
+          // list
           <RecipeList recipes={this.state.recipes} />
         )}
       </Fragment>
