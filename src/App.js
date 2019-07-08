@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Default from './pages/Default';
 import Home from './pages/Home';
+import Navbar from './components/Navbar';
 import Recipes from './pages/Recipes';
 import Single from './pages/Single';
 
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <main>
-          {/* Add Navbar here */}
+          <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/recipes" exact component={Recipes} />
