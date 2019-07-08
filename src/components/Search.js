@@ -12,6 +12,7 @@ export default class Search extends Component {
               Search Recipes With{' '}
               <strong className="text-orange">Food2Fork</strong>
             </h1>
+
             <form className="mt-4">
               <label htmlFor="search" className="text-capitalize">
                 Type ingredients separated by comma
@@ -25,6 +26,7 @@ export default class Search extends Component {
                   value={search}
                   onChange={handleChange}
                 />
+
                 <div className="input-group-append">
                   <button
                     type="submit"
