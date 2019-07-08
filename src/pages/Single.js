@@ -15,9 +15,9 @@ export default class Single extends Component {
   }
 
   async componentDidMount() {
-    const url = `https://www.food2fork.com/api/get?key=4208715bf28314226be25003b06ed012&rId=${
-      this.state.id
-    }`;
+    const url = `https://www.food2fork.com/api/get?key=${
+      process.env.REACT_APP_API_KEY
+    }&rId=${this.state.id}`;
     try {
       const response = await fetch(url);
       const responseData = await response.json();
