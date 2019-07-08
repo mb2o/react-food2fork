@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Recipe from './Recipe';
 
 export default class RecipeList extends Component {
@@ -6,9 +6,18 @@ export default class RecipeList extends Component {
     const { recipes } = this.props;
 
     return (
-      <div>
-        <h3>Recipe List</h3>
-        <Recipe />
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-10 mx-auto col-md-6 text-center text-uppercase mb-3">
+            <h1 className="text-slanted">Recipe List</h1>
+          </div>
+        </div>
+
+        <div className="row">
+          {recipes.map(recipe => (
+            <Recipe key={recipe.recipe_id} {...recipe} />
+          ))}
+        </div>
       </div>
     );
   }
